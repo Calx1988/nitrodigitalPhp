@@ -1,10 +1,8 @@
 /* Criação do banco de dados */
-
 CREATE DATABASE nitrodigital;
 
 
 /* Criação das tabelas */
-
 CREATE TABLE pais(
 	id INT NOT NULL AUTO_INCREMENT,
 	nome_pais VARCHAR(25) NOT NULL,
@@ -38,7 +36,6 @@ CREATE TABLE estado(
 
 
 /* Inserção de dados */
-
 INSERT INTO estado(nome_estado, id_pais)
 VALUES (
 	'Rio Grande do Sul', 1
@@ -90,14 +87,20 @@ VALUES (
 
 
 /* Select conforme o solicitado na questão 6A. */
-	
 SELECT * FROM estado WHERE nome_estado='parana';	
 
-
 /* Select conforme o solicitado na questão 6B. */
-
 SELECT nome_estado, nome_pais FROM estado, pais WHERE pais.id=estado.id_pais
 
 /* Criado campo sigla conforme o solicitado na questão 6C. */
 ALTER TABLE pais
 ADD COLUMN sigla VARCHAR(2);
+
+/* Criada tabela cidade conforme o solicitado na questão 6d. */
+CREATE TABLE cidade(
+    id INT NOT NULL AUTO_INCREMENT,
+    nome_cidade VARCHAR(25) NOT NULL,
+    id_estado INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY cidade(id_estado) REFERENCES estado(id)
+    );
