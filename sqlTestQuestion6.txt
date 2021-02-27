@@ -1,4 +1,9 @@
+/* Criação do banco de dados */
+
 CREATE DATABASE nitrodigital;
+
+
+/* Criação das tabelas */
 
 CREATE TABLE pais(
 	id INT NOT NULL AUTO_INCREMENT,
@@ -30,6 +35,9 @@ CREATE TABLE estado(
 	PRIMARY KEY (id),
 	FOREIGN KEY (id_pais) REFERENCES pais(id)
 	);
+
+
+/* Inserção de dados */
 
 INSERT INTO estado(nome_estado, id_pais)
 VALUES (
@@ -79,5 +87,13 @@ INSERT INTO estado(nome_estado, id_pais)
 VALUES (
 	'San Luis', 4
 	);
+
+
+/* Select conforme o solicitado na questão 6a. */
 	
-SELECT nome_estado FROM estado WHERE nome_estado='parana';
+SELECT * FROM estado WHERE nome_estado='parana';	
+
+
+/* Select conforme o solicitado na questão 6b. */
+
+SELECT nome_estado, nome_pais FROM estado, pais WHERE pais.id=estado.id_pais
