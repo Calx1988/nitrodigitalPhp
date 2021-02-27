@@ -79,3 +79,5 @@ INSERT INTO estado(nome_estado, id_pais)
 VALUES (
 	'San Luis', 4
 	);
+	
+SELECT nome_estado FROM estado WHERE nome_estado='parana';
