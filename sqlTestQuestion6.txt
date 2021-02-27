@@ -89,11 +89,15 @@ VALUES (
 	);
 
 
-/* Select conforme o solicitado na questão 6a. */
+/* Select conforme o solicitado na questão 6A. */
 	
 SELECT * FROM estado WHERE nome_estado='parana';	
 
 
-/* Select conforme o solicitado na questão 6b. */
+/* Select conforme o solicitado na questão 6B. */
 
 SELECT nome_estado, nome_pais FROM estado, pais WHERE pais.id=estado.id_pais
+
+/* Criado campo sigla conforme o solicitado na questão 6C. */
+ALTER TABLE pais
+ADD COLUMN sigla VARCHAR(2);
