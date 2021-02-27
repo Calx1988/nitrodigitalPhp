@@ -1,6 +1,20 @@
 <?php
 
-	// VALIDAÇÃO DO ARRAY
+	/*
+	
+	Em PHP, aplique as validações necessárias para que se garanta que as variáveis abaixo existam,
+	tenham um valor e que estejam no tipo correto para ser utilizado: 
+	(Se desejar, pode encaminhar link para solução no GitHub, preferimos).
+
+a) Validar a variável: $variavel = 198;
+
+B) VALIDAR O ARRAY E O ÍNDICE "endereco"
+
+$variavel = [ “nome” => “Pedro Luiz”, “endereco” => “Av Taquara”, “telefone” => “(51) 5151-51511” ];
+
+c) Validar a variável: $variavel = “Romarinho”;
+	
+	*/
 	
 	$variavel=array(
 		'nome' => '%$#$%¨918',
